@@ -29,6 +29,8 @@ class PageAcceuil extends StatelessWidget {
           ),
         ),
         actions: [
+          CircleAvatar(backgroundColor: Color.fromARGB(207, 243, 199, 223), child: Text("M", style: TextStyle(color:Color.fromARGB(255, 124, 3, 74))),),//icône de notification
+          const SizedBox(width: 10), //espace entre les icônes
           IconButton(
             icon: const Icon(Icons.account_circle, color: Colors.black87), //icône de profil utilisateur
             onPressed: () {},

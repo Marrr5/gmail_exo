@@ -108,7 +108,9 @@ class ClassDrawer extends StatelessWidget{
             
             SizedBox(
               height: 20,
-              child: Text("Tous les libellés",style: TextStyle(fontSize: 12, color: const Color.fromARGB(255, 82, 91, 95)) ),
+              child: Container(
+                padding: const EdgeInsets.only(left: 18),
+                child: Text("Tous les libellés",style: TextStyle(fontSize: 12, color: const Color.fromARGB(255, 82, 91, 95)) )),
             ), //espace entre les éléments
             
             ListTile(
@@ -194,7 +196,8 @@ class ClassDrawer extends StatelessWidget{
             ListTile(
               tileColor: const Color.fromARGB(255, 243, 243, 243),
               title: const Text('Tous les messages', style: TextStyle(color:  Color.fromARGB(255, 50, 56, 51)),),
-              leading: const Icon(Icons.mark_email_read_outlined), //icone à gauche de l'élément
+              leading: const Icon(Icons.mail_outline_rounded), //icone à gauche de l'élément
+              trailing: const Text("150"),
               onTap: () {
                 //Navigator.pushNamed(context, "/profil");
               },
@@ -221,7 +224,15 @@ class ClassDrawer extends StatelessWidget{
             ListTile(
               tileColor: const Color.fromARGB(255, 243, 243, 243),
               title: const Text('Gérer les abonements', style: TextStyle(color:  Color.fromARGB(255, 50, 56, 51)),),
-              leading: const Icon(Icons.description_outlined), //icone à gauche de l'élément
+              leading: const Icon(Icons.mark_email_unread_outlined), //icone à gauche de l'élément
+              trailing: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 224, 0, 0),
+                  borderRadius: BorderRadius.circular(12), // pour ovale / ronde
+                  ),
+                child: Text("Nouveau", style: TextStyle(color: Colors.white, fontSize: 12),),  
+              ),
               onTap: () {
                 //Navigator.pushNamed(context, "/profil");
               },
@@ -229,7 +240,10 @@ class ClassDrawer extends StatelessWidget{
 
             SizedBox(
               height: 20,
-              child: Text("Applications Google",style: TextStyle(fontSize: 12, color: const Color.fromARGB(255, 82, 91, 95)) ),
+              child: Container(
+                padding: const EdgeInsets.only(left: 18),
+                child: Text("Applications Google",style: TextStyle(fontSize: 12, color: const Color.fromARGB(255, 82, 91, 95),)),
+                ),
             ), //espace entre les éléments
 
             ListTile(
